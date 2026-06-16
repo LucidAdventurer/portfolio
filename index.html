@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[Your Name] — Developer</title>
+    <title>A.V Justin Kurian</title>
     <meta name="description" content="Web designer and backend developer. I design the experience and build the system behind it.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
     <style>
         /* ─── RESET ──────────────────────────────────────────── */
@@ -31,7 +31,7 @@
             --green:        #6DBFA0;
             --red:          #B07070;
 
-            --display:  'Syne', sans-serif;
+            --display:  'Playfair Display', serif;
             --body:     'Inter', sans-serif;
             --mono:     'JetBrains Mono', monospace;
 
@@ -159,10 +159,10 @@
         #intro {
             min-height: 100vh;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             position: relative;
             overflow: hidden;
-            padding: var(--nav-h) 0 5rem;
+            padding: calc(var(--nav-h) + 12vh) 0 6rem;
         }
 
         /* Subtle dot grid */
@@ -206,10 +206,10 @@
 
         .intro-name {
             font-family: var(--display);
-            font-size: clamp(3.8rem, 9vw, 7.5rem);
-            font-weight: 800;
-            line-height: 0.95;
-            letter-spacing: -0.025em;
+            font-size: clamp(2.6rem, 4.5vw, 4.8rem);
+            font-weight: 700;
+            line-height: 1.05;
+            letter-spacing: -0.01em;
             color: var(--text-1);
             margin-bottom: 1.25rem;
             opacity: 0;
@@ -221,29 +221,19 @@
             display: block;
         }
 
-        /* The gold first line with the draw-in underline */
+        /* The gold first line */
         .intro-name-gold {
             display: inline-block;
             color: var(--gold);
-            position: relative;
-        }
-
-        .intro-name-gold::after {
-            content: '';
-            position: absolute;
-            bottom: 4px; left: 0;
-            height: 2px;
-            width: 0;
-            background: var(--gold);
-            animation: drawLine 0.9s var(--ease) 1.1s forwards;
         }
 
         .intro-tagline {
             font-family: var(--display);
-            font-size: clamp(1.2rem, 2.5vw, 1.85rem);
-            font-weight: 600;
+            font-size: clamp(1rem, 1.6vw, 1.35rem);
+            font-weight: 400;
+            font-style: italic;
             color: var(--text-2);
-            letter-spacing: -0.01em;
+            letter-spacing: 0;
             margin-bottom: 1.5rem;
             opacity: 0;
             transform: translateY(10px);
@@ -310,34 +300,6 @@
             transform: translateY(-2px);
         }
 
-        /* ─── SCROLL INDICATOR ───────────────────────────────── */
-        .scroll-hint {
-            position: absolute;
-            bottom: 2.5rem;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.5rem;
-            opacity: 0;
-            animation: fadeIn 1s var(--ease) 1.8s forwards;
-        }
-
-        .scroll-hint-label {
-            font-family: var(--mono);
-            font-size: 0.62rem;
-            letter-spacing: 0.14em;
-            color: var(--text-3);
-        }
-
-        .scroll-line {
-            width: 1px;
-            height: 44px;
-            background: linear-gradient(to bottom, var(--gold), transparent);
-            animation: scrollPulse 2.2s ease-in-out 2.2s infinite;
-        }
-
         /* ─── SECTION SHARED ─────────────────────────────────── */
         section:not(#intro) {
             padding: 7rem 0;
@@ -366,9 +328,9 @@
 
         .section-title {
             font-family: var(--display);
-            font-size: clamp(1.9rem, 3.5vw, 2.6rem);
+            font-size: clamp(1.6rem, 2.4vw, 2.2rem);
             font-weight: 700;
-            letter-spacing: -0.02em;
+            letter-spacing: -0.01em;
             color: var(--text-1);
             line-height: 1.1;
         }
@@ -383,11 +345,11 @@
 
         .about-left h2 {
             font-family: var(--display);
-            font-size: clamp(2.2rem, 4vw, 3.4rem);
+            font-size: clamp(1.8rem, 2.8vw, 2.6rem);
             font-weight: 700;
-            letter-spacing: -0.025em;
+            letter-spacing: -0.01em;
             color: var(--text-1);
-            line-height: 1.05;
+            line-height: 1.15;
             margin-bottom: 1.5rem;
         }
 
@@ -511,10 +473,10 @@
 
         .project-name {
             font-family: var(--display);
-            font-size: 1.25rem;
+            font-size: 1.15rem;
             font-weight: 700;
             color: var(--text-1);
-            letter-spacing: -0.01em;
+            letter-spacing: 0;
         }
 
         .project-desc {
@@ -614,11 +576,11 @@
 
         .contact-left h2 {
             font-family: var(--display);
-            font-size: clamp(2rem, 3.5vw, 2.8rem);
+            font-size: clamp(1.8rem, 2.6vw, 2.4rem);
             font-weight: 700;
-            letter-spacing: -0.02em;
+            letter-spacing: -0.01em;
             color: var(--text-1);
-            line-height: 1.05;
+            line-height: 1.15;
             margin-bottom: 1.25rem;
         }
 
@@ -786,19 +748,6 @@
             to { opacity: 1; transform: none; }
         }
 
-        @keyframes fadeIn {
-            to { opacity: 1; }
-        }
-
-        @keyframes drawLine {
-            to { width: 100%; }
-        }
-
-        @keyframes scrollPulse {
-            0%, 100% { opacity: 0.25; transform: scaleY(0.9); }
-            50%       { opacity: 0.9;  transform: scaleY(1.1); }
-        }
-
         /* Scroll reveal */
         .reveal {
             opacity: 0;
@@ -892,9 +841,9 @@
                 <p class="intro-eyebrow">// web designer & backend developer</p>
                 <h1 class="intro-name">
                     <span class="intro-name-line">
-                        <span class="intro-name-gold">Justin A.V</span>
+                        <span class="intro-name-gold">A.V Justin</span>
                     </span>
-                    <span class="intro-name-line">Kurian.</span>
+                    <span class="intro-name-line">Kurian</span>
                 </h1>
                 <p class="intro-tagline">I design the experience. I build the system behind it.</p>
                 <p class="intro-desc">
@@ -908,10 +857,6 @@
                     <a href="https://github.com/LucidAdventurer" target="_blank" rel="noopener" class="btn btn-outline">GitHub ↗</a>
                 </div>
             </div>
-        </div>
-        <div class="scroll-hint">
-            <span class="scroll-hint-label">scroll</span>
-            <div class="scroll-line"></div>
         </div>
     </section>
 
@@ -1029,53 +974,51 @@
 
     <!-- ════ STACK ════════════════════════════════════════════ -->
     <section id="stack">
-        <div class="container">
-            <div class="label reveal">// stack</div>
-            <h2 class="section-title reveal d1">Tools &amp; Technologies</h2>
-            <div class="stack-grid">
+        <div class="stack-grid">
+			<!-- Group 1: Systems (Replaces Design) -->
+			<div class="stack-group reveal d1">
+				<h4>Systems</h4>
+				<div class="stack-items">
+					<div class="stack-item">C / C++</div>
+					<div class="stack-item">Arch Linux</div>
+					<div class="stack-item">UEFI / Boot Management</div>
+					<div class="stack-item">Systemd</div>
+				</div>
+			</div>
 
-                <div class="stack-group reveal d1">
-                    <h4>Design</h4>
-                    <div class="stack-items">
-                        <div class="stack-item">Figma</div>
-                        <div class="stack-item">UI / UX</div>
-                        <div class="stack-item">Design Systems</div>
-                        <div class="stack-item">Responsive Layout</div>
-                    </div>
-                </div>
+			<!-- Group 2: Backend -->
+			<div class="stack-group reveal d2">
+				<h4>Backend</h4>
+				<div class="stack-items">
+					<div class="stack-item">PHP</div>
+					<div class="stack-item">MySQL / SQL</div>
+					<div class="stack-item">Nginx / Infrastructure</div>
+					<div class="stack-item">RESTful Architecture</div>
+				</div>
+			</div>
 
-                <div class="stack-group reveal d2">
-                    <h4>Frontend</h4>
-                    <div class="stack-items">
-                        <div class="stack-item">HTML / CSS</div>
-                        <div class="stack-item">JavaScript</div>
-                        <div class="stack-item">CSS Animations</div>
-                        <div class="stack-item">Accessibility</div>
-                    </div>
-                </div>
+			<!-- Group 3: Core Web -->
+			<div class="stack-group reveal d3">
+				<h4>Core Web</h4>
+				<div class="stack-items">
+					<div class="stack-item">Modern HTML / CSS</div>
+					<div class="stack-item">JavaScript (ES6+)</div>
+					<div class="stack-item">Accessibility</div>
+					<div class="stack-item">Performance Tuning</div>
+				</div>
+			</div>
 
-                <div class="stack-group reveal d3">
-                    <h4>Backend</h4>
-                    <div class="stack-items">
-                        <div class="stack-item">PHP</div>
-                        <div class="stack-item">MySQL</div>
-                        <div class="stack-item">REST APIs</div>
-                        <div class="stack-item">Linux / Nginx</div>
-                    </div>
-                </div>
-
-                <div class="stack-group reveal d4">
-                    <h4>Workflow</h4>
-                    <div class="stack-items">
-                        <div class="stack-item">Git / GitHub</div>
-                        <div class="stack-item">Netlify</div>
-                        <div class="stack-item">VS Code</div>
-                        <div class="stack-item">Docker</div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
+			<!-- Group 4: Workflow -->
+			<div class="stack-group reveal d4">
+				<h4>Workflow</h4>
+				<div class="stack-items">
+					<div class="stack-item">Git / GitHub</div>
+					<div class="stack-item">Docker / Netlify</div>
+					<div class="stack-item">Neovim / tmux</div>
+					<div class="stack-item">GDB / Valgrind</div>
+				</div>
+			</div>
+		</div>
     </section>
 
     <!-- ════ CONTACT ═════════════════════════════════════════ -->
@@ -1092,13 +1035,13 @@
                         fast responses.
                     </p>
                     <div class="contact-links reveal d3">
-                        <a href="mailto:you@domain.com" class="contact-link">
+                        <a href="mailto:avjk7618@gmail.com" class="contact-link">
                             <span class="link-icon">@</span>
-                            you@domain.com
+                            avjk7618@gmail.com
                         </a>
-                        <a href="https://github.com/[your-username]" target="_blank" rel="noopener" class="contact-link">
+                        <a href="https://github.com/LucidAdventurer" target="_blank" rel="noopener" class="contact-link">
                             <span class="link-icon">gh</span>
-                            github.com/[username]
+                            github.com/LucidAdventurer
                         </a>
                     </div>
                 </div>
@@ -1149,10 +1092,10 @@
     <footer>
         <div class="container">
             <div class="footer-inner">
-                <span class="footer-copy">© 2026 [Your Name]</span>
+                <span class="footer-copy">© 2026 A.V Justin Kurian</span>
                 <div class="footer-links">
-                    <a href="https://github.com/[your-username]" target="_blank" rel="noopener">GitHub</a>
-                    <a href="mailto:you@domain.com">Email</a>
+                    <a href="https://github.com/LucidAdventurer" target="_blank" rel="noopener">GitHub</a>
+                    <a href="mailto:avjk7618@gmail.com">Email</a>
                 </div>
             </div>
         </div>
